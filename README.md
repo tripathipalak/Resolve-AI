@@ -1,19 +1,21 @@
 # ResolveAI — AI-Powered Customer Complaint Investigation & Resolution
 
-<p align="center">
-  **Investigate Smarter. Resolve Faster. Build Customer Trust.**
+<div align="center">
 
-  An AI-powered complaint investigation platform that analyzes customer complaints, examines supporting evidence, retrieves relevant company policies using RAG, and generates evidence-backed resolution recommendations with human approval.
-</p>
+### Investigate Smarter. Resolve Faster. Build Customer Trust.
 
-<p align="center">
-  ![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=node.js&logoColor=white)
-  ![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react&logoColor=black)
-  ![Express](https://img.shields.io/badge/Express.js-Backend-000000?logo=express)
-  ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
-  ![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?logo=google)
-  ![Firebase](https://img.shields.io/badge/Firebase-Authentication-FFCA28?logo=firebase&logoColor=black)
-</p>
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://resolve-ai-topaz.vercel.app)
+
+An AI-powered complaint investigation platform that analyzes customer complaints, examines supporting evidence, retrieves relevant company policies using RAG, and generates evidence-backed resolution recommendations with human approval.
+
+<img src="https://img.shields.io/badge/Node.js-20+-339933?logo=node.js&logoColor=white" />
+<img src="https://img.shields.io/badge/React-Frontend-61DAFB?logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Express.js-Backend-000000?logo=express" />
+<img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/Google-Gemini-4285F4?logo=google" />
+<img src="https://img.shields.io/badge/Firebase-Authentication-FFCA28?logo=firebase&logoColor=black" />
+
+</div>
 
 ---
 
@@ -58,6 +60,7 @@ ResolveAI follows a structured investigation workflow instead of behaving like a
 ## Key Features
 
 ### 1. Complaint Management
+
 - Submit complaints with order ID, category, description, and up to three evidence files.
 - Generate unique, unguessable ticket numbers.
 - Track complaint status and complete case timelines.
@@ -65,12 +68,14 @@ ResolveAI follows a structured investigation workflow instead of behaving like a
 - Submit additional information and photos when requested by support.
 
 ### 2. AI Classification & Evidence Analysis
+
 - Structured complaint classification using Google Gemini.
 - Automatic category, priority, and summary generation.
 - Multimodal analysis of images and PDF documents.
 - Zod validation of AI-generated structured outputs before saving.
 
 ### 3. RAG-Based Policy Retrieval
+
 - Upload and manage company policy documents.
 - Split policy documents into meaningful sections.
 - Generate embeddings using Gemini.
@@ -80,6 +85,7 @@ ResolveAI follows a structured investigation workflow instead of behaving like a
 - Return a no-applicable-policy result when no sufficiently relevant passage is found, rather than asking the model to guess.
 
 ### 4. Grounded AI Recommendations
+
 - Combine complaint details, evidence findings, and retrieved policies.
 - Generate structured investigation reports.
 - Attach supporting policy citations to recommendations.
@@ -88,6 +94,7 @@ ResolveAI follows a structured investigation workflow instead of behaving like a
 - Calculate confidence using investigation checks rather than relying on the model's self-reported confidence.
 
 ### 5. Agent Workspace
+
 - Dashboard with complaint counts, status filters, and search.
 - Detailed ticket investigation workspace.
 - Evidence viewer and AI-generated findings.
@@ -98,6 +105,7 @@ ResolveAI follows a structured investigation workflow instead of behaving like a
 - Track whether an approved response was edited.
 
 ### 6. Admin Management
+
 - Invite agents and administrators.
 - Assign and update user roles.
 - Remove user access.
@@ -105,6 +113,7 @@ ResolveAI follows a structured investigation workflow instead of behaving like a
 - Enable, disable, and delete policy documents.
 
 ### 7. Security & Reliability
+
 - Firebase Authentication with Google and email/password sign-in.
 - Firebase ID token verification on protected backend requests.
 - Server-side role-based authorization.
@@ -116,6 +125,8 @@ ResolveAI follows a structured investigation workflow instead of behaving like a
 ---
 
 ## How ResolveAI Works
+
+ResolveAI follows a structured AI investigation pipeline that combines complaint classification, evidence analysis, policy retrieval, recommendation generation, and human approval.
 
 ```mermaid
 flowchart TD
@@ -141,8 +152,8 @@ flowchart TD
     O -->|Approve| P[Send Approved Reply]
     O -->|Request Information| Q[Ask Customer for Details]
     O -->|Edit| R[Edit AI Draft]
-    R --> N
 
+    R --> N
     Q --> S[Customer Provides More Evidence]
     S --> C
 
@@ -210,12 +221,14 @@ flowchart TB
 | Email | Nodemailer, SMTP |
 | File Uploads | Multer, File Signature Verification |
 
+---
+
 ## Project Structure
 
 ```text
 resolve-ai/
 │
-├── client/                         
+├── client/
 │   └── src/
 │       ├── pages/
 │       │   ├── landing
@@ -396,9 +409,7 @@ npm run dev
 
 Open:
 
-```text
 http://localhost:5173
-```
 
 ### 8. Generate Sample Tickets
 
@@ -448,7 +459,7 @@ The AI pipeline, policy retrieval, email services, authentication, and API route
 
 ## Known Limitations
 
-Transparency about current implementation is important.
+Transparency about the current implementation is important.
 
 | Area | Current Implementation | Planned Improvement |
 |---|---|---|
@@ -489,10 +500,10 @@ Full-Stack Developer | GenAI Builder
 
 ---
 
-<p align="center">
+<div align="center">
 
-  **ResolveAI — Making Customer Complaint Resolution Smarter, Faster, and More Transparent.**
+### ResolveAI — Making Customer Complaint Resolution Smarter, Faster, and More Transparent.
 
-  If you find this project interesting, consider giving it a ⭐.
+If you find this project interesting, consider giving it a ⭐.
 
-</p>
+</div>
